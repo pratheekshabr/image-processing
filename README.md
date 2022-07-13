@@ -302,45 +302,45 @@ cv2.waitKey(0)<br>
 #Bilateral Blur<br>
 bilateral=cv2.bilateralFilter(image,9,75,75)<br>
 cv2.imshow('Bilateral Blurring',bilateral)<br>
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+<br>
+ouput:<br>
+image image image image<br>
 
-ouput:
-image image image image
+8.Image enhancement from PIL import Image from PIL import ImageEnhance image=Image.open('nature.jpg') image.show()<br>
 
-8.Image enhancement from PIL import Image from PIL import ImageEnhance image=Image.open('nature.jpg') image.show()
+enh_bri=ImageEnhance.Brightness(image) brightness=1.5 image_brightned=enh_bri.enhance(brightness) image_brightned.show()<br>
 
-enh_bri=ImageEnhance.Brightness(image) brightness=1.5 image_brightned=enh_bri.enhance(brightness) image_brightned.show()
+enh_col=ImageEnhance.Color(image) color=1.5 image_colored=enh_col.enhance(color) image_colored.show()<br>
 
-enh_col=ImageEnhance.Color(image) color=1.5 image_colored=enh_col.enhance(color) image_colored.show()
-
-enh_con=ImageEnhance.Contrast(image) contrast=1.5 image_contrasted=enh_col.enhance(contrast) image_contrasted.show()
+enh_con=ImageEnhance.Contrast(image) contrast=1.5 image_contrasted=enh_col.enhance(contrast) image_contrasted.show()<br>
 
 enh_sha=ImageEnhance.Sharpness(image) sharpness=3.0 image_sharped=enh_sha.enhance(sharpness) image_sharped.show()
+<br>
+Output:<br>
+image image image image image<br>
 
-Output:
-image image image image image
-
-9.morphological import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image,ImageEnhance
-img=cv2.imread('nature.jpg',0)
-ax=plt.subplots(figsize=(20,10))
-kernel=np.ones((5,5),np.uint8)
-opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
-closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
-erosion=cv2.erode(img,kernel,iterations=1)
-dilation=cv2.dilate(img,kernel,iterations=1)
-gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
-plt.subplot(151)
-plt.imshow(opening)
-plt.subplot(152)
-plt.imshow(closing)
-plt.subplot(153)
-plt.imshow(erosion)
-plt.subplot(154)
-plt.imshow(dilation)
+9.morphological import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+from PIL import Image,ImageEnhance<br><br>
+img=cv2.imread('nature.jpg',0)<br>
+ax=plt.subplots(figsize=(20,10))<br>
+kernel=np.ones((5,5),np.uint8)<br>
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)<br>
+erosion=cv2.erode(img,kernel,iterations=1)<br>
+dilation=cv2.dilate(img,kernel,iterations=1)<br>
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br><br>
+plt.imshow(dilation)<br>
 plt.subplot(155)
 plt.imshow(gradient)
 cv2.waitKey(0)
@@ -349,89 +349,58 @@ image
 
 10.Develop a program to
 
-i)Read the image convert it nto grayscale image
-ii)Write (save) the grayscale image and
-iii)display the original image and gray scale image
-import cv2
-OriginalImg=cv2.imread('rabbit.jpg')
-GrayImg=cv2.imread('rabbit.jpg',0)
-isSaved=cv2.imwrite('D:/i.jpg',GrayImg) cv2.imshow('Display original Image',OriginalImg)
-cv2.imshow('Display Grayscale image',GrayImg)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-if saved:
-print('the image is sucessfully saved')
-output:
+i)Read the image convert it nto grayscale image<br><br>
+ii)Write (save) the grayscale image and<br>
+iii)display the original image and gray scale image<br>
+import cv2<br>
+OriginalImg=cv2.imread('rabbit.jpg')<br>
+GrayImg=cv2.imread('rabbit.jpg',0)<br>
+isSaved=cv2.imwrite('D:/i.jpg',GrayImg) cv2.imshow('Display original Image',OriginalImg)<br>
+cv2.imshow('Display Grayscale image',GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if saved:<br>
+print('the image is sucessfully saved')<br>
+output:<br>
 image
-image
+image<br>
 
-11.graylevel slicing with background
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('cat.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-for j in range(0,y):
-if(image[i][j]>50 and image[i][j]<150):
-z[i][j]=255
-else:
-z[i][j]=image[i][j]
-equ=np.hstack((image,z))
-plt.title('graylevel slicing with background')
-plt.imshow(equ,'gray')
-plt.show()
-image
+11.graylevel slicing with background<br>
+import cv2<br><br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('cat.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+for j in range(0,y):<br>
+if(image[i][j]>50 and image[i][j]<150):<br>
+z[i][j]=255<br>
+else:<br>
+z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('graylevel slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
+image<br>
 
-12.graylevel slicing without background
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('cat.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-for j in range(0,y):
-if(image[i][j]>50 and image[i][j]<150):
-z[i][j]=255
-else:
-z[i][j]=0
-equ=np.hstack((image,z))
-plt.title('graylevel slicing without background')
-plt.imshow(equ,'gray')
-plt.show()
+12.graylevel slicing without background<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('cat.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+for j in range(0,y):<br>
+if(image[i][j]>50 and image[i][j]<150):<br>
+z[i][j]=255<br>
+else:<br>
+z[i][j]=0<br>
+equ=np.hstack((image,z))<br>
+plt.title('graylevel slicing without background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
 image
-
-About
-No description, website, or topics provided.
-Resources
- Readme
-Stars
- 0 stars
-Watchers
- 1 watching
-Forks
- 0 forks
-Releases
-No releases published
-Packages
-No packages published
-Languages
-Jupyter Notebook
-100.0%
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+<br>
 
