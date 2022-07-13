@@ -38,8 +38,9 @@ OUTPUT:<br>
 (255, 255, 0)<br>
 (255, 0, 0)<br>
 (255, 192, 203)<br>
-![image](https://user-images.githubusercontent.com/97940277/178714652-4c2bc801-8aff-4be1-ae92-5c4813df62b7.png)
-<b>5.Write a program to create image using color</b><br>
+![image](https://user-images.githubusercontent.com/97940277/178714652-4c2bc801-8aff-4be1-ae92-5c4813df62b7.png)<br>
+
+  <b>5.Write a program to create image using color</b><br>
 from PIL import Image)<br>
 img=Image.new("RGB",(200,400),(255,255,0)))<br>
 img.show())</b><br>
