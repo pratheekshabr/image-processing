@@ -26,22 +26,23 @@ output:
 ![image](https://user-images.githubusercontent.com/97940277/178715617-c3a1cac0-5bae-4fda-9a5a-66b6ed1371d3.png)
 
 <b>4.DEVELOP PROGRAM TO CONVERT colorstring to RGB COLOR VALUES
-import cv2
-from PIL import ImageColor
-img1=ImageColor.getrgb("yellow")
-print(img1)
-img1=ImageColor.getrgb("red")
-print(img1)
-img1=ImageColor.getrgb("pink")
-print(img1)
-OUTPUT:
-(255, 255, 0)
-(255, 0, 0)
-(255, 192, 203)
-5.Write a program to create image using color
-from PIL import Image)
-img=Image.new("RGB",(200,400),(255,255,0)))
-img.show())</b>
+import cv2<br>
+from PIL import ImageColor<br>
+img1=ImageColor.getrgb("yellow")<br>
+print(img1)<br>
+img1=ImageColor.getrgb("red")<br>
+print(img1)<br>
+img1=ImageColor.getrgb("pink")<br>
+print(img1)<br>
+OUTPUT:<br>
+(255, 255, 0)<br>
+(255, 0, 0)<br>
+(255, 192, 203)<br>
+
+<b>5.Write a program to create image using color</b><br>
+from PIL import Image)<br>
+img=Image.new("RGB",(200,400),(255,255,0)))<br>
+img.show())</b><br>
 
 
 ![image](https://user-images.githubusercontent.com/97940277/178714652-4c2bc801-8aff-4be1-ae92-5c4813df62b7.png)
