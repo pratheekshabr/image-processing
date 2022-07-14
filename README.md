@@ -287,7 +287,7 @@ Output:<br>
 import cv2<br>
 import numpy as np<br><br>
 
-image=cv2.imread('puppy2.jpg')<br>
+image=cv2.imread('img1.jpg')<br>
 
 cv2.imshow('original Image',image)<br>
 cv2.waitKey(0)<br>
@@ -309,7 +309,12 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 <br>
 ouput:<br>
-image image image image<br>
+![image](https://user-images.githubusercontent.com/97940277/178963497-95b95e6f-bdac-4dd4-963a-3821f2e6e1f2.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178963597-fb3f4b1e-fffb-4c56-91f8-8cef9d30bcd5.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178963707-2aab2b8e-716e-400f-a4c1-b3ce03378f51.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178963808-69aff8c8-c3e7-4a8c-b9d2-8b99a26083f9.png)<br>
+
+
 
 8.Image enhancement from PIL import Image from PIL import ImageEnhance image=Image.open('nature.jpg') image.show()<br>
 
