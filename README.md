@@ -77,22 +77,26 @@ size: (259, 194)<br>
 width: 259<br>
 height: 194<br>
 
-8.Resize the original imag<br>
-from PIL import Imag<br>
-image=Image.open("flower2.jpg"<br>
-print("Filename:",image.filename<br>
-print("Format:",image.format<br>
-print("Mode:",image.mode<br>
-print("Size:",image.size<br>
-print("Width:",image.width<br>
-print("Height:",image.height<br>
-image.close(<br>
+8.Resize the original image<br>
+import cv2<br>
+img=cv2.imread('flower1.jpg')<br>
+print('original image length width',img.shape)<br>
+cv2.imshow('original image',img)<br>
+cv2.waitKey(0)<br>
+#to show the resized image<br>
+imgresize=cv2.resize(img,(150,160))<br>
+cv2.imshow('Resized image',imgresize)<br>
+print('resized image lenght width',imgresize.shape)<br>
+cv2.waitKey(0)<br>
 output:<br>
-![image](https://user-images.githubusercontent.com/97940277/178718073-94f423a6-8f30-4ae1-b811-66cca3f0a53b.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178969992-f5f49c45-8628-40a9-afba-37611a58b6b7.png)<br>
+
+![image](https://user-images.githubusercontent.com/97940277/178970033-b932113c-695c-4878-ad97-3e1515692309.png)<br>
+https://user-images.githubusercontent.com/97970956/178962689-f36d053a-dabb-4cca-877c-93967f5fa5ba.png<br>
+
 
 9.convert the original to grey scale and then to binary <br>
 import cv2<br>
-
 img=cv2.imread('flower3.jpg')<br>
 cv2.imshow("RGB",img)<br>
 cv2.waitKey(0)<br>
