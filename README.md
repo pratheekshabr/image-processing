@@ -173,7 +173,7 @@ blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
 plt.imshow(blur)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178719967-f39ef39a-b4aa-426c-a437-a026e61044ae.png)<br>
-<br>
+
 
 3.write a program to perform arithmatic operation on images?<br>
 import cv2<br>
@@ -210,10 +210,13 @@ plt.show()<br>
 #saving the output image<br>
 cv2.imwrite('output.jpg',fimg4)<br>
 
-image
-image
-image
-image
+![image](https://user-images.githubusercontent.com/97940277/178959748-3e3bd558-a612-4234-a9f1-b6c709986966.png)<br>
+
+![image](https://user-images.githubusercontent.com/97940277/178959801-e20b90ea-d197-4c46-8188-17504200b67e.png)<br>
+
+![image](https://user-images.githubusercontent.com/97940277/178959841-f60a3bc6-b162-477e-a117-280479858fee.png)<br>
+
+
 
 4.write a program to image to different color space
 import cv2
@@ -231,11 +234,12 @@ cv2.imshow("YUV image",yuv)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 output:<br>
-image<br>
-image
-image
-image
-image
+![image](https://user-images.githubusercontent.com/97940277/178959979-7b7bee01-ca37-424e-bdb9-9146a9b27dcb.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178961160-12aa4ad0-c6b3-4d5d-888c-5ae9f1175754.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178961197-c8b9e5d2-74f8-4825-905d-94c418c8363d.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178961237-c232087d-ae43-4dde-bbf7-347254023580.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178961292-952e8568-cb52-4e98-9209-c8dc787eb673.png)<br>
+
 
 5.program to create an image using 2Darray<br>
 
@@ -250,7 +254,7 @@ img.save('image1.png')<br>
 img.show()<br><br>
 c.waitKey(0)<br>
 
-image
+![image](https://user-images.githubusercontent.com/97940277/178961601-9ff2d0c5-c1ed-4cd2-a732-5a7dd4a8d334.png)<br>
 
 6.Image processing using bitwise operator?<br><br>
 
@@ -276,9 +280,8 @@ plt.subplot(155)<br>
 plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br>
 
-Outpu:<br><br>
-
-image<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/178962555-312d6f92-7ac9-4bde-beea-12a1d6273a26.png)<br>
 
 7.blur image<br>
 import cv2<br>
