@@ -316,24 +316,43 @@ ouput:<br>
 
 
 
-8.Image enhancement from PIL import Image from PIL import ImageEnhance image=Image.open('nature.jpg') image.show()<br>
+8.Image enhancement<br>
+from PIL import Image <br>
+from PIL import ImageEnhance <br>
+image=Image.open('nature.jpg') <br>
+image.show()<br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5 <br>
+image_brightned=enh_bri.enhance(brightness) <br>
+image_brightned.show()<br>
+enh_col=ImageEnhance.Color(image) <br>
+color=1.5 <br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contrasted=enh_col.enhance(contrast) <br>
+image_contrasted.show()<br><br>
+enh_sha=ImageEnhance.Sharpness(image) <br>
+sharpness=3.0 <br>
+image_sharped=enh_sha.enhance(sharpness) <br>
+image_sharped.show()<br>
 
-enh_bri=ImageEnhance.Brightness(image) brightness=1.5 image_brightned=enh_bri.enhance(brightness) image_brightned.show()<br>
-
-enh_col=ImageEnhance.Color(image) color=1.5 image_colored=enh_col.enhance(color) image_colored.show()<br>
-
-enh_con=ImageEnhance.Contrast(image) contrast=1.5 image_contrasted=enh_col.enhance(contrast) image_contrasted.show()<br>
-
-enh_sha=ImageEnhance.Sharpness(image) sharpness=3.0 image_sharped=enh_sha.enhance(sharpness) image_sharped.show()
-<br>
 Output:<br>
-image image image image image<br>
+![image](https://user-images.githubusercontent.com/97940277/178964842-98026394-6cc7-4df8-8def-544709ecb2c1.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178964989-e2188b15-8d0f-465e-896e-4211443e38c4.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178965136-b4e0b66e-7f43-4940-936d-fe1a86c9d2ab.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178965388-049b7efa-f03d-4cc9-b0d8-28873b4cc93e.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178965455-0e1fa11d-af59-4fdf-9490-5aae9da7e325.png)<br>
 
-9.morphological import cv2<br>
+
+
+9.morphological <br>
+import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
 from PIL import Image,ImageEnhance<br><br>
-img=cv2.imread('nature.jpg',0)<br>
+img=cv2.imread('lotus.jpg',0)<br>
 ax=plt.subplots(figsize=(20,10))<br>
 kernel=np.ones((5,5),np.uint8)<br>
 opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
@@ -349,11 +368,11 @@ plt.subplot(153)<br>
 plt.imshow(erosion)<br>
 plt.subplot(154)<br><br>
 plt.imshow(dilation)<br>
-plt.subplot(155)
-plt.imshow(gradient)
-cv2.waitKey(0)
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
 
-image
+
 
 10.Develop a program to
 
