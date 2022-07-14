@@ -436,3 +436,72 @@ plt.imshow(equ,'gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178971069-841184c4-6139-42e3-b45a-7aec654a47b8.png)<br>
 
+
+13. import numpy<br>
+import numpy as np<br>
+img  = cv2.imread('puppy.jpg',0)<br>
+hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
+plt.hist(img.ravel(),256,[0,256])<br>
+plt.show()<br>
+
+![image](https://user-images.githubusercontent.com/97940277/178972022-a049dc4d-d317-4ef4-9ff5-23ebd96ed19f.png)<br>
+  
+  #skiimg <br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('puppy.jpg')<br><br>
+
+_ = plt.hist(image.ravel(), bins = 256, color = 'orange', )<br>
+_ = plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count')<br>
+_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])<br>
+plt.show()<br>
+
+![image](https://user-images.githubusercontent.com/97940277/178972127-d414ae9e-266e-42a8-a179-c7b0c2e6f3ec.png)<br>
+
+#matplot<br>
+import cv2  <br><br>
+from matplotlib import pyplot as plt  <br>
+img = cv2.imread('img1.jpg',0) <br>
+histr = cv2.calcHist([img],[0],None,[256],[0,256]) <br>
+plt.plot(histr) <br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940277/178972230-8504461a-c763-4309-a5c8-2b2ffc972473.png)<br>
+
+import numpy as np<br>
+import cv2 as cv<br>
+from matplotlib import pyplot as plt<br>
+img = cv.imread('img1.jpg')<br>
+plt.imshow(img)<br><br>
+plt.show()<br>
+img = cv.imread('img1.jpg',0)<br>
+plt.hist(img.ravel(),256,[0,256]);<br>
+plt.show()<br>
+
+![image](https://user-images.githubusercontent.com/97940277/178972305-f2e0d53a-dd7c-40f2-af6c-93b53ee53058.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178972354-29cf073c-97b6-4475-8ed1-0045fec07d1e.png)<br>
+
+
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+img = io.imread('puppy.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+image = io.imread('puppy.jpg')<br>
+ax = plt.hist(image.ravel(), bins = 256)<br><br>
+plt.show()<br>
+
+![image](https://user-images.githubusercontent.com/97940277/178972402-8910f18f-383e-4392-be67-49e81f598bb1.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178972455-2ca9ad8c-c55f-45ce-8516-6beeff5e8079.png)<br>
+
+
+
+
+
+
+
+
+
