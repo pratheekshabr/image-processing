@@ -352,7 +352,7 @@ import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
 from PIL import Image,ImageEnhance<br><br>
-img=cv2.imread('lotus.jpg',0)<br>
+img=cv2.imread('tj.jpg',0)<br>
 ax=plt.subplots(figsize=(20,10))<br>
 kernel=np.ones((5,5),np.uint8)<br>
 opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
@@ -371,6 +371,9 @@ plt.imshow(dilation)<br>
 plt.subplot(155)<br>
 plt.imshow(gradient)<br>
 cv2.waitKey(0)<br>
+output:<br>
+![image](https://user-images.githubusercontent.com/97940277/178966916-1772b3bd-5108-42d9-85fe-58dc632188a0.png)<br>
+
 
 
 
