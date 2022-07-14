@@ -90,9 +90,8 @@ print('resized image lenght width',imgresize.shape)<br>
 cv2.waitKey(0)<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178969992-f5f49c45-8628-40a9-afba-37611a58b6b7.png)<br>
-
 ![image](https://user-images.githubusercontent.com/97940277/178970033-b932113c-695c-4878-ad97-3e1515692309.png)<br>
-https://user-images.githubusercontent.com/97970956/178962689-f36d053a-dabb-4cca-877c-93967f5fa5ba.png<br>
+![image](https://user-images.githubusercontent.com/97940277/178970358-c68f01ef-7e19-48f0-938d-9eb3f7142497.png)<br>
 
 
 9.convert the original to grey scale and then to binary <br>
