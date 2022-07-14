@@ -392,8 +392,8 @@ cv2.destroyAllWindows()<br>
 if saved:<br>
 print('the image is sucessfully saved')<br>
 output:<br>
-image
-image<br>
+![image](https://user-images.githubusercontent.com/97940277/178967628-d19f0ee9-c6cc-4e40-a89b-44eafef2b393.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/178967711-f1a39883-2a42-4613-9182-feb487bd373c.png)<br>
 
 11.graylevel slicing with background<br>
 import cv2<br><br>
