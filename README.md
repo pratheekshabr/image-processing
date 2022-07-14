@@ -415,7 +415,7 @@ equ=np.hstack((image,z))<br>
 plt.title('graylevel slicing with background')<br>
 plt.imshow(equ,'gray')<br>
 plt.show()<br>
-image<br>
+![image](https://user-images.githubusercontent.com/97940277/178971021-11356c05-51f6-4643-8018-83e266ab49fd.png)<br>
 
 12.graylevel slicing without background<br>
 import cv2<br>
@@ -434,6 +434,5 @@ equ=np.hstack((image,z))<br>
 plt.title('graylevel slicing without background')<br>
 plt.imshow(equ,'gray')<br>
 plt.show()<br>
-image
-<br>
+![image](https://user-images.githubusercontent.com/97940277/178971069-841184c4-6139-42e3-b45a-7aec654a47b8.png)<br>
 
