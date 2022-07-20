@@ -560,10 +560,10 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/179957646-5c867267-cb46-4f22-8ed6-6ee02f2958ae.png)<br>
 
 
-Program to perform basic image manipulation:<br>
+<b>Program to perform basic image manipulation:<br>
 a) Sharpness<br>
 b) Flipping<br>
-c) Cropping<br>
+c) Cropping</b><br>
 <br>
 #image sharpen<br>
 from PIL import Image<br>
