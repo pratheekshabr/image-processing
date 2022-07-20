@@ -574,7 +574,7 @@ my_image=Image.open('donkey.jpg')<br>
 #Use sharpen function<br>
 sharp=my_image.filter(ImageFilter.SHARPEN)<br>
 #Save the image<br>
-sharp.save('D:\pratheeksha\donkey.jpg')<br>
+sharp.save('D:/image_sharpen.jpg')<br>
 sharp.show()<br>
 plt.imshow(sharp)<br>
 plt.show()<br>
@@ -590,7 +590,7 @@ plt.show()<br>
 #use the flip function<br>
 flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
 #save the image<br>
-flip.save('D:\pratheeksha\donkey.jpg')<br>
+flip.save('D:/image_flip.jpg')<br>
 plt.imshow(flip)<br>
 plt.show()<br>
 Output:<br>
