@@ -497,10 +497,11 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178972455-2ca9ad8c-c55f-45ce-8516-6beeff5e8079.png)<br>
 
 
-1. Program to perform basic image data analysis using intensity transformation:<br>
+<b>1. Program to perform basic image data analysis using intensity transformation:<br>
 a) Image negative<br>
 b) Log transformation<br>
-c) Gamma correction<br>
+c) Gamma correction</b><br>
+<br>
 %matplotlib inline<br>
 import imageio<br>
 import matplotlib.pyplot as plt<br>
@@ -563,6 +564,7 @@ Program to perform basic image manipulation:<br>
 a) Sharpness<br>
 b) Flipping<br>
 c) Cropping<br>
+<br>
 #image sharpen<br>
 from PIL import Image<br>
 from PIL import ImageFilter<br>
