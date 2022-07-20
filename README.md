@@ -497,6 +497,67 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178972455-2ca9ad8c-c55f-45ce-8516-6beeff5e8079.png)<br>
 
 
+1. Program to perform basic image data analysis using intensity transformation:
+a) Image negative
+b) Log transformation
+c) Gamma correction
+%matplotlib inline
+import imageio
+import matplotlib.pyplot as plt
+import warnings
+import matplotlib.cbook
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+pic=imageio.imread('bunny.jpg')
+plt.figure(figsize=(6,6))
+plt.imshow(pic);
+plt.axis('off');
+output:
+![image](https://user-images.githubusercontent.com/97940277/179957210-112531e2-756b-4107-b63e-8387318457df.png)
+
+
+negative=255-pic #neg =(L-1) - img
+plt.figure(figsize=(6,6))
+plt.imshow(negative);
+plt.axis('off');
+output:
+![image](https://user-images.githubusercontent.com/97940277/179957372-c634c061-dd9d-49be-92bf-a16f44eddfb1.png)
+
+
+%matplotlib inline
+
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+
+pic=imageio.imread('bunny.jpg')
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
+gray=gray(pic)
+
+max_=np.max(gray)
+
+def log_transform():
+    return(255/np.log(1+max_))*np.log(1+gray)
+plt.figure(figsize=(5,5))
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
+plt.axis('off');
+output:
+![image](https://user-images.githubusercontent.com/97940277/179957511-21d86811-5c8b-4e90-85e8-4c1a85d78ad0.png)
+
+
+import imageio
+import matplotlib.pyplot as plt
+
+#Gamma encoding
+pic=imageio.imread('bunny.jpg')
+gamma=2.2#Gamma <1 ~ Dark ; Gamma >1 ~ Bright
+
+gamma_correction=((pic/255)**(1/gamma))
+plt.figure(figsize=(5,5))
+plt.imshow(gamma_correction)
+plt.axis('off');
+output:
+![image](https://user-images.githubusercontent.com/97940277/179957646-5c867267-cb46-4f22-8ed6-6ee02f2958ae.png)
+
 
 
 
