@@ -380,15 +380,15 @@ output:<br>
 
 
 
-10.Develop a program to
-
-i)Read the image convert it nto grayscale image<br><br>
+<b>10.Develop a program to
+i)Read the image convert it nto grayscale image<br>
 ii)Write (save) the grayscale image and<br>
 iii)display the original image and gray scale image<br>
-import cv2<br>
+import cv2</b><br>
 OriginalImg=cv2.imread('rabbit.jpg')<br>
 GrayImg=cv2.imread('rabbit.jpg',0)<br>
-isSaved=cv2.imwrite('D:/i.jpg',GrayImg) cv2.imshow('Display original Image',OriginalImg)<br>
+isSaved=cv2.imwrite('D:/i.jpg',GrayImg) <br>
+cv2.imshow('Display original Image',OriginalImg)<br>
 cv2.imshow('Display Grayscale image',GrayImg)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
@@ -698,5 +698,63 @@ plt.show()<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/180194316-3afb44a0-128c-4a2f-8550-4473003e71a9.png)<br>
 
-
+ <b>gradient</b><br>
+ from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+  
+# Create an image as input:<br>
+input_image = Image.new(mode="RGB", size=(400, 400),color="blue")<br>
+  
+                        
+# save the image as "input.png"<br>
+#(not mandatory)<br>
+#input_image.save("input", format="png")<br>
+  
+# Extracting pixel map:<br>
+pixel_map = input_image.load()<br>
+  
+# Extracting the width and height<br>
+# of the image:<br>
+width, height = input_image.size<br>
+z = 100<br>
+for i in range(width):<br>
+    for j in range(height):<br>
+        
+        # the following if part will create<br>
+        # a square with color orange<br>
+        if((i >= z and i <= width-z) and (j >= z and j <= height-z)):<br>
+            
+            # RGB value of orange.<br>
+            pixel_map[i, j] = (255, 165, 255)<br>
+  <br>
+        # the following else part will fill the<br>
+        # rest part with color light salmon.<br>
+        else:<br>
+            
+            # RGB value of light salmon.<br>
+            pixel_map[i, j] = (255, 160, 0)<br>
+  
+# The following loop will create a cross<br>
+# of color blue.<br>
+for i in range(width):<br>
+    
+    # RGB value of Blue.<br>
+    pixel_map[i, i] = (0, 0, 255)<br>
+    pixel_map[i, width-i-1] = (0, 0, 255)<br>
+  
+# Saving the final output<br>
+# as "output.png":<br>
+#input_image.save("output", format="png")<br>
+plt.imshow(input_image)<br>
+plt.show()  <br>
+# use input_image.show() to see the image on the<br>
+# output screen.<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/180200737-78131d59-eb23-4471-8634-0fe50a9ec9c7.png)<br>
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
 
