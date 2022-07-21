@@ -664,7 +664,6 @@ for y in range(imgsize[1]):<br>
         b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
         # print r, g, b<br>
         arr[y, x] = (int(r), int(g), int(b))<br>
-
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 Output:<br>
@@ -726,7 +725,7 @@ for i in range(width):<br>
             
             # RGB value of orange.<br>
             pixel_map[i, j] = (255, 165, 255)<br>
-  <br>
+
         # the following else part will fill the<br>
         # rest part with color light salmon.<br>
         else:<br>
@@ -752,8 +751,21 @@ plt.show()  <br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/180200737-78131d59-eb23-4471-8634-0fe50a9ec9c7.png)<br>
                                                                     
-                                                                    
-                                                                    
+  from PIL import Image<br>
+import numpy as np<br>
+w, h = 512, 512<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:100, 0:100] = [255, 0, 0]<br>
+data[100:200, 100:200] = [255, 0, 255]<br>
+data[200:300, 200:300] = [0, 255, 0]<br>
+# red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+img.save('my.png')<br>
+plt.imshow(img)<br>
+plt.show()   <br>                                                               
+Output:<br>
+ ![image](https://user-images.githubusercontent.com/97940277/180202933-58200f0f-68bc-4269-92da-8d6033214275.png)<br>
+
                                                                     
                                                                     
                                                                     
