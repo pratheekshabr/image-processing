@@ -16,7 +16,7 @@ plt.imshow(img)<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178715164-f0ca5170-7d9f-4e77-a659-e9495150dca7.png)
 
-<b>3.develop a program to perform linear transformation rotation from PIL import Image<br>
+<b>3.develop a program to perform linear transformation rotation from PIL import Image</b><br>
 img=Image.open("plant1.jpg")<br>
 img=img.rotate(180)
 img.show()<br>
@@ -25,7 +25,7 @@ cv2.destroyAllWindows() </b> <br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178715617-c3a1cac0-5bae-4fda-9a5a-66b6ed1371d3.png)
 
-<b>4.DEVELOP PROGRAM TO CONVERT colorstring to RGB COLOR VALUES<br>
+<b>4.Develop Program to convert colorstring to RGB Color values</b><br>
 import cv2<br>
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yellow")<br>
@@ -46,7 +46,7 @@ img.show())</b><br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178714652-4c2bc801-8aff-4be1-ae92-5c4813df62b7.png)<br>
 
-<br>6.develop a program to utilize the image using various color spaces<br>
+<b><br>6.develop a program to utilize the image using various color spaces</b><br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 import numpy as np<br>
@@ -61,7 +61,7 @@ plt.imshow(img)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178717913-670f45ec-46e7-491c-8ce2-87bc66920811.png)<br>
 
-7.write a program to display image attributes<br>
+<b>7.write a program to display image attributes</b><br>
 from PIL import Image<br>
 image=Image.open('d1.jpg')<br>
 print("filename:",image.filename)<br>
@@ -77,7 +77,7 @@ size: (259, 194)<br>
 width: 259<br>
 height: 194<br>
 
-8.Resize the original image<br>
+<b>8.Resize the original image</b><br>
 import cv2<br>
 img=cv2.imread('flower1.jpg')<br>
 print('original image length width',img.shape)<br>
@@ -94,7 +94,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178970358-c68f01ef-7e19-48f0-938d-9eb3f7142497.png)<br>
 
 
-9.convert the original to grey scale and then to binary <br>
+<b>9.convert the original to grey scale and then to binary</b> <br>
 import cv2<br>
 img=cv2.imread('flower3.jpg')<br>
 cv2.imshow("RGB",img)<br>
@@ -117,7 +117,7 @@ output:<br>
 
 
 Lab excercise<br>
-1.cover the image to URL code<br>
+<b>1.cover the image to URL code</b><br>
 from skimage import io<br><br>
 import matplotlib.pyplot as plt<br>
 url='https://i.natgeofe.com/n/3861de2a-04e6-45fd-aec8-02e7809f9d4e/02-cat-training-NationalGeographic_1484324_3x2.jpg'<br>
@@ -128,7 +128,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178718739-bcf6c0b9-010f-4099-ba5e-2d68ad97f8d7.png)<br>
 
 
-**2.Write a program to mask and blur the image **<br>
+<b>2.Write a program to mask and blur the image </b><br>
 import cv2<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
@@ -178,7 +178,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178719967-f39ef39a-b4aa-426c-a437-a026e61044ae.png)<br>
 
 
-3.write a program to perform arithmatic operation on images?<br>
+<b>3.write a program to perform arithmatic operation on images</b><br>
 import cv2<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
@@ -221,7 +221,7 @@ cv2.imwrite('output.jpg',fimg4)<br>
 
 
 
-4.write a program to image to different color space
+<b>4.write a program to image to different color space</b><br>
 import cv2
 img=cv2.imread("D:\red.jpg")<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
@@ -244,7 +244,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178961292-952e8568-cb52-4e98-9209-c8dc787eb673.png)<br>
 
 
-5.program to create an image using 2Darray<br>
+<b>5.program to create an image using 2Darray</b><br>
 
 import cv2 as c<br>
 import numpy as np<br>
@@ -259,7 +259,7 @@ c.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940277/178961601-9ff2d0c5-c1ed-4cd2-a732-5a7dd4a8d334.png)<br>
 
-6.Image processing using bitwise operator?<br><br>
+<b>6.Image processing using bitwise operator?</b><br>
 
 import cv2<br><br>
 import matplotlib.pyplot as plt<br>
@@ -286,7 +286,7 @@ cv2.waitKey(0)<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178962555-312d6f92-7ac9-4bde-beea-12a1d6273a26.png)<br>
 
-7.blur image<br>
+<b>7.blur image</b><br>
 import cv2<br>
 import numpy as np<br><br>
 
@@ -319,7 +319,7 @@ ouput:<br>
 
 
 
-8.Image enhancement<br>
+<b>8.Image enhancement</b><br>
 from PIL import Image <br>
 from PIL import ImageEnhance <br>
 image=Image.open('nature.jpg') <br>
@@ -350,7 +350,7 @@ Output:<br>
 
 
 
-9.morphological <br>
+<b>9.morphological </b><br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
