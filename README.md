@@ -222,8 +222,8 @@ cv2.imwrite('output.jpg',fimg4)<br>
 
 
 <b>4.write a program to image to different color space</b><br>
-import cv2
-img=cv2.imread("D:\red.jpg")<br>
+import cv2 <br>
+img=cv2.imread("D:\pratheeksha\puppy.jpg")<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
 lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
@@ -231,7 +231,8 @@ hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
 yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
 cv2.imshow("GRAY image",gray)<br>
 cv2.imshow("HSV image",hsv)<br>
-cv2.imshow("LAB image",lab)<br><br>
+cv2.imshow("LAB image",lab)<br>
+
 cv2.imshow("HLS image",hls)<br>
 cv2.imshow("YUV image",yuv)<br>
 cv2.waitKey(0)<br>
