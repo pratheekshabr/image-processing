@@ -820,26 +820,25 @@ Output:<br>
 # Function to print the pattern<br>
 def printPattern(n):<br>
  
-    arraySize = n * 2 - 1;<br>
-    result = [[0 for x in range(arraySize)]<br>
-                 for y in range(arraySize)];<br>
+  arraySize = n * 2 - 1;<br>
+  result = [[0 for x in range(arraySize)]<br>
+               for y in range(arraySize)];<br>
          
-    # Fill the values<br>
-    for i in range(arraySize):<br><br>
-        for j in range(arraySize):<br>
-            if(abs(i - (arraySize // 2)) ><br>
-               abs(j - (arraySize // 2))):<br>
-                result[i][j] = abs(i - (arraySize // 2));<br>
-            else:
-                result[i][j] = abs(j - (arraySize // 2));<br>
+  # Fill the values<br>
+  for i in range(arraySize):<br><br>
+      for j in range(arraySize):<br>
+          if(abs(i - (arraySize // 2)) ><br>
+             abs(j - (arraySize // 2))):<br>
+              result[i][j] = abs(i - (arraySize // 2));<br>
+          else:
+              result[i][j] = abs(j - (arraySize // 2));<br>
              
-    # Print the array<br>
-    for i in range(arraySize):<br>
-        for j in range(arraySize):<br>
-            print(result[i][j], end = " ");<br>
-        print("");<br>
- 
-# Driver Code<br>
+  # Print the array<br>
+  for i in range(arraySize):<br>
+      for j in range(arraySize):<br>
+          print(result[i][j], end = " ");<br>
+      print("");<br>
+ # Driver Code<br>
 n = 4;<br>
  
 printPattern(n);<br>
