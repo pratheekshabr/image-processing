@@ -766,6 +766,57 @@ plt.show()   <br>
 Output:<br>
  ![image](https://user-images.githubusercontent.com/97940277/180202933-58200f0f-68bc-4269-92da-8d6033214275.png)<br>
 
+<h1>ASSIGNMENT WORK</h1><br>
+Finding the average of an image<br>
+#average<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread("cougar.jpg")<br>
+plt.imshow(img)<br>
+np.average(img)<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/181231102-80b31acd-42fa-4c57-81b4-5406b754e2f9.png)<br>
+
+#standard deviation<br>
+from PIL import Image,ImageStat<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('cougar.jpg')<br>
+plt.imshow(im)<br>
+plt.show()<br><br>
+stat=ImageStat.Stat(im)<br>
+print(stat.stddev)<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/181231384-2cf60bfe-82d5-4bb5-8ac2-379df02ff989.png)<br>
+
+#Max<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread('black.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
+
+print(max_channels)<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/181231610-80cbb6d1-f856-4125-8382-2cd9f4a8f889.png)<br>
+
+#Min<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread('zebra.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
+
+print(min_channels)<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/181231801-16327a15-de96-4477-b8ab-e4bc487d7311.png)<br>
+<h1>
+
+
+
                                                                     
                                                                     
                                                                     
