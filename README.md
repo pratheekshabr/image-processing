@@ -813,11 +813,41 @@ min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,
 print(min_channels)<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/181231801-16327a15-de96-4477-b8ab-e4bc487d7311.png)<br>
-<h1>
 
-
-
-                                                                    
-                                                                    
-                                                                    
-
+# Python3 program for printing
+# the rectangular pattern
+ 
+# Function to print the pattern
+def printPattern(n):
+ 
+    arraySize = n * 2 - 1;
+    result = [[0 for x in range(arraySize)]
+                 for y in range(arraySize)];
+         
+    # Fill the values
+    for i in range(arraySize):
+        for j in range(arraySize):
+            if(abs(i - (arraySize // 2)) >
+               abs(j - (arraySize // 2))):
+                result[i][j] = abs(i - (arraySize // 2));
+            else:
+                result[i][j] = abs(j - (arraySize // 2));
+             
+    # Print the array
+    for i in range(arraySize):
+        for j in range(arraySize):
+            print(result[i][j], end = " ");
+        print("");
+ 
+# Driver Code
+n = 4;
+ 
+printPattern(n);
+Output
+3 3 3 3 3 3 3 
+3 2 2 2 2 2 3 
+3 2 1 1 1 2 3 
+3 2 1 0 1 2 3 
+3 2 1 1 1 2 3 
+3 2 2 2 2 2 3 
+3 3 3 3 3 3 3 
