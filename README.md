@@ -224,7 +224,7 @@ cv2.imwrite('output.jpg',fimg4)<br>
 <b>4.write a program to image to different color space</b><br>
 import cv2 <br>
 img=cv2.imread("D:\pratheeksha\puppy.jpg")<br>
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
 lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
 hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
@@ -232,21 +232,18 @@ yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
 cv2.imshow("GRAY image",gray)<br>
 cv2.imshow("HSV image",hsv)<br>
 cv2.imshow("LAB image",lab)<br>
-
 cv2.imshow("HLS image",hls)<br>
 cv2.imshow("YUV image",yuv)<br>
 cv2.waitKey(0)<br>
-cv2.destroyAllWindows()<br>
+cv2.destroyAllWindows() <br>                          
 output:<br>
-![image](https://user-images.githubusercontent.com/97940277/178959979-7b7bee01-ca37-424e-bdb9-9146a9b27dcb.png)<br>
-![image](https://user-images.githubusercontent.com/97940277/178961160-12aa4ad0-c6b3-4d5d-888c-5ae9f1175754.png)<br>
-![image](https://user-images.githubusercontent.com/97940277/178961197-c8b9e5d2-74f8-4825-905d-94c418c8363d.png)<br>
-![image](https://user-images.githubusercontent.com/97940277/178961237-c232087d-ae43-4dde-bbf7-347254023580.png)<br>
-![image](https://user-images.githubusercontent.com/97940277/178961292-952e8568-cb52-4e98-9209-c8dc787eb673.png)<br>
-
+![image](https://user-images.githubusercontent.com/97940277/181433883-ceb22beb-9054-4ed9-b44f-bf8347e94605.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/181434399-f796263c-3d06-41ff-8cb2-54e6f73f250f.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/181434703-44cec813-a7e3-4542-99c2-ff476480cd44.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/181434913-502db3ff-68b3-43bc-80f3-58b27030b063.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/181435426-9f26b714-4ee0-498a-a3cb-e9e775fc19f2.png)<br>
 
 <b>5.program to create an image using 2Darray</b><br>
-
 import cv2 as c<br>
 import numpy as np<br>
 from PIL import Image<br>
