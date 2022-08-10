@@ -675,8 +675,7 @@ for y in range(imgsize[1]):<br>
 
    #Make it on a scale from 0 to 1innerColor<br>
    distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
-
-    #Calculate r, g, and b values<br>
+ #Calculate r, g, and b values<br>
     r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
     g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
     b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
@@ -688,7 +687,9 @@ plt.show()<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/180194316-3afb44a0-128c-4a2f-8550-4473003e71a9.png)<br>
 
+ 
  <b>gradient</b><br>
+ 
  from PIL import Image<br>
 import matplotlib.pyplot as plt<br>
   
@@ -743,19 +744,19 @@ Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/180200737-78131d59-eb23-4471-8634-0fe50a9ec9c7.png)<br>
                                                                     
                                                                     
-                                                                    
-     from PIL import Image<br>
-     import numpy as np<br>
-     w, h = 512, 512<br>
-     data = np.zeros((h, w, 3), dtype=np.uint8)<br>
-     data[0:100, 0:100] = [255, 0, 0]<br>
-     data[100:200, 100:200] = [255, 0, 255]<br>
-     data[200:300, 200:300] = [0, 255, 0]<br>
+ 
+ from PIL import Image<br>
+ import numpy as np<br>
+ w, h = 512, 512<br>
+ data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+ data[0:100, 0:100] = [255, 0, 0]<br>
+ data[100:200, 100:200] = [255, 0, 255]<br>
+ data[200:300, 200:300] = [0, 255, 0]<br>
  #red patch in upper left<br>
-     img = Image.fromarray(data, 'RGB')<br>
-     img.save('my.png')<br>
-     plt.imshow(img)<br>
-     plt.show()   <br>                                                               
+ img = Image.fromarray(data, 'RGB')<br>
+ img.save('my.png')<br>
+ plt.imshow(img)<br>
+ plt.show() <br>                                                               
 Output:<br>
  ![image](https://user-images.githubusercontent.com/97940277/180202933-58200f0f-68bc-4269-92da-8d6033214275.png)<br>
 
@@ -770,6 +771,7 @@ np.average(img)<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/181231102-80b31acd-42fa-4c57-81b4-5406b754e2f9.png)<br>
 
+ 
 #standard deviation<br>
 from PIL import Image,ImageStat<br>
 import matplotlib.pyplot as plt<br>
@@ -829,9 +831,8 @@ def printPattern(n):<br>
       for j in range(arraySize):<br>
           print(result[i][j], end = " ");<br>
       print("");<br>
- # Driver Code<br>
+ #Driver Code<br>
 n = 4;<br>
- 
 printPattern(n);<br>
 Output:<br>
 3 3 3 3 3 3 3 <br>
