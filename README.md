@@ -165,7 +165,6 @@ plt.show()<br>
 
 
 final_mask=mask+mask_white<br>
-
 final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
 plt.subplot(1,2,1)<br>
 plt.imshow(final_mask,cmap="gray")<br>
@@ -396,7 +395,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178967628-d19f0ee9-c6cc-4e40-a89b-44eafef2b393.png)<br>
 ![image](https://user-images.githubusercontent.com/97940277/178967711-f1a39883-2a42-4613-9182-feb487bd373c.png)<br>
 
-11.graylevel slicing with background<br>
+<b>11.graylevel slicing with background</b><br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -415,7 +414,7 @@ plt.imshow(equ,'gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178971021-11356c05-51f6-4643-8018-83e266ab49fd.png)<br>
 
-12.graylevel slicing without background<br>
+<b>12.graylevel slicing without background</b><br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -435,7 +434,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178971069-841184c4-6139-42e3-b45a-7aec654a47b8.png)<br>
 
 
-13. import numpy<br>
+<b>13. import numpy</b><br>
 import numpy as np<br>
 img  = cv2.imread('puppy.jpg',0)<br>
 hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
@@ -495,7 +494,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178972455-2ca9ad8c-c55f-45ce-8516-6beeff5e8079.png)<br>
 
 
-<b>1. Program to perform basic image data analysis using intensity transformation:<br>
+<b>1. Program to perform basic image data analysis using intensity transformation:</b><br>
 a) Image negative<br>
 b) Log transformation<br>
 c) Gamma correction</b><br>
@@ -523,17 +522,13 @@ output:<br>
 
 
 %matplotlib inline<br>
-
 import imageio<br><br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
-
 pic=imageio.imread('bunny.jpg')<br>
 gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
 gray=gray(pic)<br>
-
 max_=np.max(gray)<br>
-
 def log_transform():<br>
     return(255/np.log(1+max_))*np.log(1+gray)<br>
 plt.figure(figsize=(5,5))<br>
@@ -558,7 +553,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/179957646-5c867267-cb46-4f22-8ed6-6ee02f2958ae.png)<br>
 
 
-<b>Program to perform basic image manipulation:<br>
+<b>Program to perform basic image manipulation:</b><br>
 a) Sharpness<br>
 b) Flipping<br>
 c) Cropping</b><br>
