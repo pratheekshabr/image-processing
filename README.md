@@ -42,7 +42,7 @@ OUTPUT:<br>
  <b>5.Write a program to create image using color</b><br>
 from PIL import Image)<br>
 img=Image.new("RGB",(200,400),(255,255,0)))<br>
-img.show())</b><br>
+img.show())<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178714652-4c2bc801-8aff-4be1-ae92-5c4813df62b7.png)<br>
 
@@ -116,9 +116,9 @@ output:<br>
 
 
 
-Lab excercise<br>
+<b>Lab excercise</b><br>
 <b>1.cover the image to URL code</b><br>
-from skimage import io<br><br>
+from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://i.natgeofe.com/n/3861de2a-04e6-45fd-aec8-02e7809f9d4e/02-cat-training-NationalGeographic_1484324_3x2.jpg'<br>
 image=io.imread(url) plt.imshow(image)<br>
@@ -201,7 +201,7 @@ plt.show()<br>
 cv2.imwrite('output.jpg',fimg2)<br>
 fimg3=img1*img2<br>
 plt.imshow(fimg3)<br>
-plt.show()<br><br>
+plt.show()<br>
 
 #saving the output image<br>
 cv2.imwrite('output.jpg',fimg3)<br>
@@ -251,14 +251,14 @@ array[:,:100]=[255,130,0]<br>
 array[:,100:]=[0,0,255]<br>
 img=Image.fromarray(array)<br>
 img.save('image1.png')<br>
-img.show()<br><br>
+img.show()<br>
 c.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940277/178961601-9ff2d0c5-c1ed-4cd2-a732-5a7dd4a8d334.png)<br>
 
 <b>6.Image processing using bitwise operator?</b><br>
 
-import cv2<br><br>
+import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('nature.jpg')<br>
 image2=cv2.imread('nature.jpg')<br>
@@ -285,10 +285,8 @@ Output:<br>
 
 <b>7.blur image</b><br>
 import cv2<br>
-import numpy as np<br><br>
-
+import numpy as np<br>
 image=cv2.imread('img1.jpg')<br>
-
 cv2.imshow('original Image',image)<br>
 cv2.waitKey(0)<br>
 
@@ -323,7 +321,7 @@ image=Image.open('nature.jpg') <br>
 image.show()<br>
 enh_bri=ImageEnhance.Brightness(image)<br>
 brightness=1.5 <br>
-image_brightned=enh_bri.enhance(brightness) <br>
+image_brightned=enh_bri.enhance(brightness)<br>
 image_brightned.show()<br>
 enh_col=ImageEnhance.Color(image) <br>
 color=1.5 <br>
@@ -331,11 +329,11 @@ image_colored=enh_col.enhance(color)<br>
 image_colored.show()<br>
 enh_con=ImageEnhance.Contrast(image)<br>
 contrast=1.5<br>
-image_contrasted=enh_col.enhance(contrast) <br>
+image_contrasted=enh_col.enhance(contrast)<br>
 image_contrasted.show()<br>
-enh_sha=ImageEnhance.Sharpness(image) <br>
+enh_sha=ImageEnhance.Sharpness(image)<br>
 sharpness=3.0 <br>
-image_sharped=enh_sha.enhance(sharpness) <br>
+image_sharped=enh_sha.enhance(sharpness)<br>
 image_sharped.show()<br>
 
 Output:<br>
@@ -351,7 +349,7 @@ Output:<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
-from PIL import Image,ImageEnhance<br><br>
+from PIL import Image,ImageEnhance<br>
 img=cv2.imread('tj.jpg',0)<br>
 ax=plt.subplots(figsize=(20,10))<br>
 kernel=np.ones((5,5),np.uint8)<br>
@@ -380,11 +378,11 @@ output:<br>
 <b>10.Develop a program to
 i)Read the image convert it nto grayscale image<br>
 ii)Write (save) the grayscale image and<br>
-iii)display the original image and gray scale image<br>
-import cv2</b><br>
+iii)display the original image and gray scale image</b><br>
+import cv2<br>
 OriginalImg=cv2.imread('rabbit.jpg')<br>
 GrayImg=cv2.imread('rabbit.jpg',0)<br>
-isSaved=cv2.imwrite('D:/i.jpg',GrayImg) <br>
+isSaved=cv2.imwrite('D:/i.jpg',GrayImg)<br>
 cv2.imshow('Display original Image',OriginalImg)<br>
 cv2.imshow('Display Grayscale image',GrayImg)<br>
 cv2.waitKey(0)<br>
@@ -522,7 +520,7 @@ output:<br>
 
 
 %matplotlib inline<br>
-import imageio<br><br>
+import imageio<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 pic=imageio.imread('bunny.jpg')<br>
@@ -561,7 +559,7 @@ c) Cropping</b><br>
 #image sharpen<br>
 from PIL import Image<br>
 from PIL import ImageFilter<br>
-import matplotlib.pyplot as plt<br><br>
+import matplotlib.pyplot as plt<br>
 #Load the image<br>
 my_image=Image.open('donkey.jpg')<br>
 #Use sharpen function<br>
@@ -578,7 +576,7 @@ Output:<br>
 import matplotlib.pyplot as plt<br>
 #Load the image<br>
 img=Image.open('donkey.jpg')<br>
-plt.imshow(img)<br><br>
+plt.imshow(img)<br>
 plt.show()<br>
 #use the flip function<br>
 flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
@@ -609,7 +607,7 @@ plt.show()<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/179964521-1f5e332d-b847-4272-b5a0-de70b19d7b12.png)<br>
 
-<b>Converting matrix to image</br>
+<b>Converting matrix to image</b></br>
 from PIL import Image<br>
 import numpy as np<br>w, h = 512, 512<br>
 data = np.zeros((h, w, 3), dtype=np.uint8)<br>
@@ -620,7 +618,7 @@ img.show()<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/180192388-f2782654-a047-4e27-a698-aba6d962f4d8.png)<br>
 
-<b>Grayscale gradient<b><br>
+<b>Grayscale gradient</b><br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 x = np.linspace(10,6, 100)<br>
@@ -641,16 +639,16 @@ outerColor = (0, 0, 0)<br>
 for y in range(imgsize[1]):<br>
    for x in range(imgsize[0]):<br>
 #Find the distance to the center<br>
- distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<
+ distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
  #Make it on a scale from 0 to 1innerColor<br>
  distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
 
- #Calculate r, g, and b values<br>
+#Calculate r, g, and b values<br>
  r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
  g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>  
  b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
-  # print r, g, b<br
-   arr[y, x] = (int(r), int(g), int(b))<br>
+#print r, g, b<br
+arr[y, x] =(int(r), int(g), int(b))<br>
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 Output:<br>
