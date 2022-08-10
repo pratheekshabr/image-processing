@@ -139,13 +139,13 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178719442-0e757f29-9c36-431e-bacf-2ed20a326e60.png)<br>
 
 
-hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br><br>
-light_orange=(1,190,200)<br><br>
-dark_orange=(18,255,255)<br><br>
-mask=cv2.inRange(img,light_orange,dark_orange)<br><br>
-result=cv2.bitwise_and(img,img,mask=mask)<br><br><br>
-plt.subplot(1,2,1)<br><br>
-plt.imshow(mask,cmap="gray")<br><br>
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+light_orange=(1,190,200)<br>
+dark_orange=(18,255,255)<br>
+mask=cv2.inRange(img,light_orange,dark_orange)<br>
+result=cv2.bitwise_and(img,img,mask=mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap="gray")<br>
 plt.subplot(1,2,2)<br>
 plt.imshow(result)<br>
 ![image](https://user-images.githubusercontent.com/97940277/178719520-ba663976-accd-44b9-b586-ac2a1b255b96.png)<br>
@@ -169,7 +169,7 @@ final_mask=mask+mask_white<br>
 final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
 plt.subplot(1,2,1)<br>
 plt.imshow(final_mask,cmap="gray")<br>
-plt.subplot(1,2,2)<br><br>
+plt.subplot(1,2,2)<br>
 plt.imshow(final_result)<br>
 plt.show() image<br>
 blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
@@ -261,7 +261,7 @@ c.waitKey(0)<br>
 
 import cv2<br><br>
 import matplotlib.pyplot as plt<br>
-image1=cv2.imread('nature.jpg')<br><br>
+image1=cv2.imread('nature.jpg')<br>
 image2=cv2.imread('nature.jpg')<br>
 ax=plt.subplots(figsize=(15,10))<br>
 bitwiseAnd=cv2.bitwise_and (image1,image2)<br>
@@ -333,7 +333,7 @@ image_colored.show()<br>
 enh_con=ImageEnhance.Contrast(image)<br>
 contrast=1.5<br>
 image_contrasted=enh_col.enhance(contrast) <br>
-image_contrasted.show()<br><br>
+image_contrasted.show()<br>
 enh_sha=ImageEnhance.Sharpness(image) <br>
 sharpness=3.0 <br>
 image_sharped=enh_sha.enhance(sharpness) <br>
@@ -367,7 +367,7 @@ plt.subplot(152)<br>
 plt.imshow(closing)<br>
 plt.subplot(153)<br>
 plt.imshow(erosion)<br>
-plt.subplot(154)<br><br>
+plt.subplot(154)<br>
 plt.imshow(dilation)<br>
 plt.subplot(155)<br>
 plt.imshow(gradient)<br>
@@ -397,7 +397,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178967711-f1a39883-2a42-4613-9182-feb487bd373c.png)<br>
 
 11.graylevel slicing with background<br>
-import cv2<br><br>
+import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
 image=cv2.imread('cat.jpg',0)<br>
@@ -460,7 +460,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178972127-d414ae9e-266e-42a8-a179-c7b0c2e6f3ec.png)<br>
 
 #matplot<br>
-import cv2  <br><br>
+import cv2  <br>
 from matplotlib import pyplot as plt  <br>
 img = cv2.imread('img1.jpg',0) <br>
 histr = cv2.calcHist([img],[0],None,[256],[0,256]) <br>
@@ -488,7 +488,7 @@ img = io.imread('puppy.jpg')<br>
 plt.imshow(img)<br>
 plt.show()<br>
 image = io.imread('puppy.jpg')<br>
-ax = plt.hist(image.ravel(), bins = 256)<br><br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
 plt.show()<br>
 
 ![image](https://user-images.githubusercontent.com/97940277/178972402-8910f18f-383e-4392-be67-49e81f598bb1.png)<br>
@@ -509,7 +509,7 @@ warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
 pic=imageio.imread('bunny.jpg')<br>
 plt.figure(figsize=(6,6))<br>
 plt.imshow(pic);<br>
-plt.axis('off');<br><br>
+plt.axis('off');<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/179957210-112531e2-756b-4107-b63e-8387318457df.png)<br>
 
@@ -537,7 +537,7 @@ max_=np.max(gray)<br>
 def log_transform():<br>
     return(255/np.log(1+max_))*np.log(1+gray)<br>
 plt.figure(figsize=(5,5))<br>
-plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br><br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
 plt.axis('off');<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/179957511-21d86811-5c8b-4e90-85e8-4c1a85d78ad0.png)<br>
@@ -607,7 +607,7 @@ width,height=im.size<br>
 #Cropped image of above dimension<br>
 #(It will not change the original image)<br>
 im1=im.crop((280,100,800,600))<br>
-#Shiws the image in image viewer<br>
+#Shows the image in image viewer<br>
 im1.show()<br>
 plt.imshow(im1)<br>
 plt.show()<br>
@@ -616,9 +616,7 @@ Output:<br>
 
 <b>Converting matrix to image</br>
 from PIL import Image<br>
-import numpy as np<br>
-
-w, h = 512, 512<br>
+import numpy as np<br>w, h = 512, 512<br>
 data = np.zeros((h, w, 3), dtype=np.uint8)<br>
 data[0:256, 0:256] = [0, 255, 0] # red patch in upper left<br>
 img = Image.fromarray(data, 'RGB')<br>
@@ -630,10 +628,8 @@ Output:<br>
 <b>Grayscale gradient<b><br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
-
 x = np.linspace(10,6, 100)<br>
 image = np.tile(x, (100, 1)).T<br>
-
 plt.imshow(image, cmap='gray')<br>
 plt.show()<br>
 Output:<br>
@@ -643,25 +639,23 @@ Output:<br>
 <b>Fill circle with grayscale gradient</b><br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
-
 arr = np.zeros((256,256,3), dtype=np.uint8)<br>
 imgsize = arr.shape[:2]<br>
 innerColor = (255, 255, 255)<br>
 outerColor = (0, 0, 0)<br>
 for y in range(imgsize[1]):<br>
-    for x in range(imgsize[0]):<br>
-        #Find the distance to the center<br>
-        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
+   for x in range(imgsize[0]):<br>
+#Find the distance to the center<br>
+ distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<
+ #Make it on a scale from 0 to 1innerColor<br>
+ distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
 
-        #Make it on a scale from 0 to 1innerColor<br>
-        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
-
-        #Calculate r, g, and b values<br>
-        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
-        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
-        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
-        # print r, g, b<br>
-        arr[y, x] = (int(r), int(g), int(b))<br>
+ #Calculate r, g, and b values<br>
+ r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+ g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>  
+ b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+  # print r, g, b<br
+   arr[y, x] = (int(r), int(g), int(b))<br>
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 Output:<br>
@@ -669,25 +663,24 @@ Output:<br>
 
 <b>Fill circle with color gradient</b><br>
 import numpy as np<br>
-import matplotlib.pyplot as plt<br>
-<br>
+import matplotlib.pyplot as plt<
 arr = np.zeros((256,256,3), dtype=np.uint8)<br>
 imgsize = arr.shape[:2]<br>
 innerColor = (255, 255, 255)<br>
 outerColor = (0, 100, 100)<br>
 for y in range(imgsize[1]):<br>
     for x in range(imgsize[0]):<br>
-     #Find the distance to the center<br>
-     distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
+  #Find the distance to the center<br>
+  distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
 
-      #Make it on a scale from 0 to 1innerColor<br>
-      distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
+   #Make it on a scale from 0 to 1innerColor<br>
+   distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
 
-       #Calculate r, g, and b values<br>
-       r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
-       g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
-       b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
-       # print r, g, b<br>
+    #Calculate r, g, and b values<br>
+    r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+    g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+    b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+    # print r, g, b<br>
       arr[y, x] = (int(r), int(g), int(b))<br>
 
 plt.imshow(arr, cmap='gray')<br>
@@ -699,68 +692,70 @@ Output:<br>
  from PIL import Image<br>
 import matplotlib.pyplot as plt<br>
   
-# Create an image as input:<br>
+#Create an image as input:<br>
 input_image = Image.new(mode="RGB", size=(400, 400),color="blue")<br>
   
                         
-# save the image as "input.png"<br>
+#save the image as "input.png"<br>
 #(not mandatory)<br>
 #input_image.save("input", format="png")<br>
   
-# Extracting pixel map:<br>
+#Extracting pixel map:<br>
 pixel_map = input_image.load()<br>
   
-# Extracting the width and height<br>
-# of the image:<br>
+#Extracting the width and height<br>
+#of the image:<br>
 width, height = input_image.size<br>
 z = 100<br>
 for i in range(width):<br>
     for j in range(height):<br>
         
-        # the following if part will create<br>
-        # a square with color orange<br>
+
+#the following if part will create<br>
+#a square with color orange<br>
         if((i >= z and i <= width-z) and (j >= z and j <= height-z)):<br>
             
-            # RGB value of orange.<br>
+   #RGB value of orange.<br>
             pixel_map[i, j] = (255, 165, 255)<br>
-
-        # the following else part will fill the<br>
-        # rest part with color light salmon.<br>
-        else:<br>
+            #the following else part will fill the<br
+            #rest part with color light salmon.<br>
+          else:<br>
             
-            # RGB value of light salmon.<br>
-            pixel_map[i, j] = (255, 160, 0)<br>
-  
-# The following loop will create a cross<br>
-# of color blue.<br>
-for i in range(width):<br>
-    
-    # RGB value of Blue.<br>
+ 
+ #RGB value of light salmon.<br>
+               pixel_map[i, j] = (255, 160, 0)
+               #The following loop will create a cr
+               #of color blue.<br>
+   for i in range(width):<br>
+ 
+ #RGB value of Blue.<br>
     pixel_map[i, i] = (0, 0, 255)<br>
     pixel_map[i, width-i-1] = (0, 0, 255)<br>
   
-# Saving the final output<br>
-# as "output.png":<br>
+#Saving the final output<br>
+#as "output.png":<br>
 #input_image.save("output", format="png")<br>
 plt.imshow(input_image)<br>
 plt.show()  <br>
-# use input_image.show() to see the image on the<br>
-# output screen.<br>
+#use input_image.show() to see the image on the<br>
+#output screen.<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/180200737-78131d59-eb23-4471-8634-0fe50a9ec9c7.png)<br>
                                                                     
-  from PIL import Image<br>
-import numpy as np<br>
-w, h = 512, 512<br>
-data = np.zeros((h, w, 3), dtype=np.uint8)<br>
-data[0:100, 0:100] = [255, 0, 0]<br>
-data[100:200, 100:200] = [255, 0, 255]<br>
-data[200:300, 200:300] = [0, 255, 0]<br>
-# red patch in upper left<br>
-img = Image.fromarray(data, 'RGB')<br>
-img.save('my.png')<br>
-plt.imshow(img)<br>
-plt.show()   <br>                                                               
+                                                                    
+                                                                    
+     from PIL import Image<br>
+     import numpy as np<br>
+     w, h = 512, 512<br>
+     data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+     data[0:100, 0:100] = [255, 0, 0]<br>
+     data[100:200, 100:200] = [255, 0, 255]<br>
+     data[200:300, 200:300] = [0, 255, 0]<br>
+ #red patch in upper left<br>
+     img = Image.fromarray(data, 'RGB')<br>
+     img.save('my.png')<br>
+     plt.imshow(img)<br>
+     plt.show()   <br>                                                               
 Output:<br>
  ![image](https://user-images.githubusercontent.com/97940277/180202933-58200f0f-68bc-4269-92da-8d6033214275.png)<br>
 
@@ -794,7 +789,6 @@ img=imageio.imread('black.jpg' )<br>
 plt.imshow(img)<br>
 plt.show()<br>
 max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
-
 print(max_channels)<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/181231610-80cbb6d1-f856-4125-8382-2cd9f4a8f889.png)<br>
@@ -807,22 +801,21 @@ img=imageio.imread('zebra.jpg' )<br>
 plt.imshow(img)<br>
 plt.show()<br>
 min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
-
 print(min_channels)<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/181231801-16327a15-de96-4477-b8ab-e4bc487d7311.png)<br>
 
-# Python3 program for printing<br>
-# the rectangular pattern<br>
+#Python3 program for printing<br>
+#the rectangular pattern<br>
  
-# Function to print the pattern<br>
+#Function to print the pattern<br>
 def printPattern(n):<br>
  
   arraySize = n * 2 - 1;<br>
   result = [[0 for x in range(arraySize)]<br>
                for y in range(arraySize)];<br>
          
-  # Fill the values<br>
+  #Fill the values<br>
   for i in range(arraySize):<br><br>
       for j in range(arraySize):<br>
           if(abs(i - (arraySize // 2)) ><br>
@@ -831,7 +824,7 @@ def printPattern(n):<br>
           else:
               result[i][j] = abs(j - (arraySize // 2));<br>
              
-  # Print the array<br>
+  #Print the array<br>
   for i in range(arraySize):<br>
       for j in range(arraySize):<br>
           print(result[i][j], end = " ");<br>
