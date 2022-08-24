@@ -836,6 +836,18 @@ Output:<br>
 3 2 2 2 2 2 3 <br>
 3 3 3 3 3 3 3 <br>
 
+<b>#image to matrrix</b><br>
+import matplotlib.image as image<br>
+img=image.imread('puppy2.jpg')<br>
+print('The Shape of the image is:',img.shape)<br>
+print('The image as array is:')<br>
+print(img)<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/186402878-22fde0cc-8e09-44d7-a99c-702d1b93c585.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/186402959-090d7def-ba1f-4158-8d6e-1a15d3dfa2ec.png)<br>
+<br>
+
+
 <b>#Program to perform image manipulation and edge detecton</b><br>
 import cv2<br><br><br>
 
