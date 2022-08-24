@@ -836,46 +836,47 @@ Output:<br>
 3 2 2 2 2 2 3 <br>
 3 3 3 3 3 3 3 <br>
 
-import cv2
+<b>#Program to perform image manipulation and edge detecton</b><br>
+import cv2<br><br><br>
 
-# Read the original image
-img = cv2.imread('puppy.jpg')
+# Read the original image<br>
+img = cv2.imread('puppy.jpg')<br>
 
-# Display original image
-cv2.imshow('Original', img)
-cv2.waitKey(0)
+# Display original image<br>
+cv2.imshow('Original', img)<br>
+cv2.waitKey(0)<br>
 
-# Convert to graycsale
-img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+# Convert to graycsale<br>
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
 
-# Blur the image for better edge detection
-img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)
+# Blur the image for better edge detection<br>
+img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br>
  
-# Sobel Edge Detection
-sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis
-sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis
-sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection
+# Sobel Edge Detection<br><br>
+sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br><br>
+sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br><br>
+sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br><br>
 
-# Display Sobel Edge Detection Images
-cv2.imshow('Sobel X', sobelx)
-cv2.waitKey(0)
-cv2.imshow('Sobel Y', sobely)
-cv2.waitKey(0)
-cv2.imshow('Sobel X Y using Sobel() function', sobelxy)
-cv2.waitKey(0)
+# Display Sobel Edge Detection Images<br><br>
+cv2.imshow('Sobel X', sobelx)<br><br>
+cv2.waitKey(0)<br><br>
+cv2.imshow('Sobel Y', sobely)<br><br>
+cv2.waitKey(0)<br><br>
+cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br><br>
+cv2.waitKey(0)<br><br>
 
-# Canny Edge Detection
-edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection
+# Canny Edge Detection<br><br>
+edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br><br>
 
-# Display Canny Edge Detection Image
-cv2.imshow('Canny Edge Detection', edges)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-Output:
-![image](https://user-images.githubusercontent.com/97940277/186398965-77ef8731-590a-4bc1-a834-c600e7802abf.png)
-![image](https://user-images.githubusercontent.com/97940277/186399818-e431c93b-30d2-4b70-8c7b-ad9fa6653ced.png)
-![image](https://user-images.githubusercontent.com/97940277/186400392-0ad52aa6-77fa-450d-b589-c27b23f4e323.png)
-![image](https://user-images.githubusercontent.com/97940277/186400959-fb00a9cb-5cc5-4287-ac2e-3b7e077f23de.png)
+# Display Canny Edge Detection Image<br><br>
+cv2.imshow('Canny Edge Detection', edges)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/97940277/186398965-77ef8731-590a-4bc1-a834-c600e7802abf.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/186399818-e431c93b-30d2-4b70-8c7b-ad9fa6653ced.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/186400392-0ad52aa6-77fa-450d-b589-c27b23f4e323.png)<br>
+![image](https://user-images.githubusercontent.com/97940277/186400959-fb00a9cb-5cc5-4287-ac2e-3b7e077f23de.png)<br>
 
 
 
