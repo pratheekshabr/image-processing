@@ -827,14 +827,14 @@ def printPattern(n):<br>
  #Driver Code<br>
 n = 4;<br>
 printPattern(n);<br>
-Output:<br>
+<b>Output:<br>
 3 3 3 3 3 3 3 <br>
 3 2 2 2 2 2 3 <br>
 3 2 1 1 1 2 3 <br>
 3 2 1 0 1 2 3 <br>
 3 2 1 1 1 2 3 <br>
 3 2 2 2 2 2 3 <br>
-3 3 3 3 3 3 3 <br>
+3 3 3 3 3 3 3 <br></b>
 
 <b>#image to matrrix</b><br>
 import matplotlib.image as image<br>
