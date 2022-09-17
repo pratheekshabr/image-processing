@@ -891,4 +891,30 @@ Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/186400959-fb00a9cb-5cc5-4287-ac2e-3b7e077f23de.png)<br>
 
 
+from PIL import Image,ImageChops,ImageFilter
+from matplotlib import pyplot as plt
+
+#create PIL a image object
+x=Image.open("x.png")
+o=Image.open("o.png")
+
+#find out attributes if image objects
+print('size of the image:',x.size,'color mode:',x.mode)
+print('size of the image:',o.size,'color mode:',o.mode)
+
+#plot 2 imageone besides the other
+plt.subplot(121),plt.imshow(x) 
+plt.axis('off')
+plt.subplot(122),plt.imshow(o)
+plt.axis('off')
+
+#multiply images
+merged=ImageChops.multiply(x,o)
+
+#adding 2 images
+add=ImageChops.add(x,o)
+
+#convert color mode
+greyscale=merged.convert('L')
+greyscale
 
